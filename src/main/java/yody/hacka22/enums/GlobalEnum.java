@@ -18,4 +18,8 @@ public class GlobalEnum {
         M,
         L
     }
+    public enum Role {
+        BUYER,
+        DESIGNER
+    }
 }
