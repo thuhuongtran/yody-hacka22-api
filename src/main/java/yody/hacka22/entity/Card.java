@@ -8,16 +8,19 @@ import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 @Getter
 @Setter
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Document("order_item")
+@Document("card")
 @Accessors(chain = true)
-public class OrderItem {
+public class Card {
     @Id
     private String id;
-    private DesignShirt designShirt;
-    private Double price;
-    private Integer count;
+    private User user;
+    private String accountNumber;
+    private Date expireDate;
+    private String cvv;
 }

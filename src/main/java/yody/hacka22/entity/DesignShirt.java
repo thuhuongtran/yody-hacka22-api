@@ -12,12 +12,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Document("order_item")
+@Document("design-shirt")
 @Accessors(chain = true)
-public class OrderItem {
+public class DesignShirt {
     @Id
     private String id;
-    private DesignShirt designShirt;
-    private Double price;
-    private Integer count;
+    private String title;
+    private TemplateShirt templateShirt;
+    private String designDecorationImageLink;
 }

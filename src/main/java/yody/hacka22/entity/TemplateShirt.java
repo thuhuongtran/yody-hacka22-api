@@ -13,15 +13,14 @@ import yody.hacka22.enums.GlobalEnum;
 @Setter
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Document("shirt")
+@Document("template-shirt")
 @Accessors(chain = true)
-public class Shirt {
+public class TemplateShirt {
     @Id
     private String id;
-    private String title;
     private GlobalEnum.ShirtType type;
     private GlobalEnum.ShirtColor color;
-    private String imageLink;
-    private String designDecorationImageLink;
+    private String templateImageLink;
     private GlobalEnum.ShirtSize size;
+    private Integer storageCount;
 }
