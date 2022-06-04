@@ -18,4 +18,5 @@ public class User {
     GlobalEnum.Role role;
     String loginNamed;
     String password; // base64
+    String city;
 }

@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import yody.hacka22.dto.FindTemplateShirtRequest;
 import yody.hacka22.entity.TemplateShirt;
 import yody.hacka22.repository.TemplateShirtRepository;
 

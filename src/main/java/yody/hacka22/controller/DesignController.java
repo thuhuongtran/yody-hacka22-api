@@ -1,6 +1,7 @@
 package yody.hacka22.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import yody.hacka22.dao.DesignDao;
 import yody.hacka22.entity.Design;
@@ -19,9 +20,12 @@ public class DesignController {
     private DesignRepository designRepository;
 
     @PostMapping("save")
-    public String save(@RequestBody Design design) {
-        designDao.save(design);
-        return OK.toString();
+    public ResponseEntity<Design> save(@RequestBody Design design) {
+        Design response = designDao.save(design);
+        if (response != null){
+            return ResponseEntity.ok(response);
+        }
+        return null;
     }
 
     @GetMapping("find")

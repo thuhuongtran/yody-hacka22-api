@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
+import yody.hacka22.enums.GlobalEnum;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -16,7 +17,7 @@ public class Order {
     String id;
     LocalDate orderDate;
     String customerId;
-    String paymentMethod;
+    GlobalEnum.PaymentMethod paymentMethod;
     Double shippingFee;
     Double totalCost ;
     LocalDate estimatedShippingDate;
