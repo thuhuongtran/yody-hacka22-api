@@ -17,6 +17,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class OrderItem {
     @Id
     private String id;
+    private String orderId;
     private DesignShirt designShirt;
     private Double price;
     private Integer count;

@@ -8,6 +8,7 @@ import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -21,6 +22,6 @@ public class Card {
     private String id;
     private User user;
     private String accountNumber;
-    private Date expireDate;
+    private LocalDate expireDate;
     private String cvv;
 }

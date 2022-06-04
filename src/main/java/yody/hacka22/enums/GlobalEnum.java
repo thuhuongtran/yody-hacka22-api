@@ -22,4 +22,10 @@ public class GlobalEnum {
         BUYER,
         DESIGNER
     }
+
+    public enum PaymentMethod {
+        COD,
+        CARD
+    }
+
 }

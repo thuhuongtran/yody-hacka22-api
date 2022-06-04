@@ -20,6 +20,7 @@ public class Design {
     @Id
     private String id;
     private String title;
+    private String description;
     private String imageLink;
     private Double price;
     private List<String> tags;
