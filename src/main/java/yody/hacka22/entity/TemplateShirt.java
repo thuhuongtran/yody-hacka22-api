@@ -23,4 +23,5 @@ public class TemplateShirt {
     private String templateImageLink;
     private GlobalEnum.ShirtSize size;
     private Integer storageCount;
+    private Double corePrice;
 }

@@ -19,5 +19,5 @@ public class DesignShirt {
     private String id;
     private String title;
     private TemplateShirt templateShirt;
-    private String designDecorationImageLink;
+    private Design design;
 }
