@@ -1,10 +1,7 @@
 package yody.hacka22.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import yody.hacka22.dao.ShirtDao;
 import yody.hacka22.entity.Shirt;
 import yody.hacka22.repository.ShirtRepository;
@@ -26,4 +23,8 @@ public class ShirtController {
         return OK.toString();
     }
 
+    @GetMapping("find")
+    public Shirt getById(@RequestParam("id") String id) {
+        return shirtDao.findById(id).get();
+    }
 }
