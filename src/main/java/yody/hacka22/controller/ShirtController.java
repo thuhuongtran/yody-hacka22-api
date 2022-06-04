@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import yody.hacka22.dao.ShirtDao;
 import yody.hacka22.entity.Shirt;
-import yody.hacka22.repository.ShirtRepository;
 
 import static org.springframework.http.HttpStatus.OK;
 
@@ -13,9 +12,6 @@ import static org.springframework.http.HttpStatus.OK;
 public class ShirtController {
     @Autowired
     private ShirtDao shirtDao;
-
-    @Autowired
-    private ShirtRepository shirtRepository;
 
     @PostMapping("save")
     public String save(@RequestBody Shirt shirt) {

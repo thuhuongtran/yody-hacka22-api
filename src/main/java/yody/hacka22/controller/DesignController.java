@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import yody.hacka22.dao.DesignDao;
 import yody.hacka22.entity.Design;
+import yody.hacka22.repository.DesignRepository;
+
+import java.util.List;
 
 import static org.springframework.http.HttpStatus.OK;
 
@@ -12,6 +15,8 @@ import static org.springframework.http.HttpStatus.OK;
 public class DesignController {
     @Autowired
     private DesignDao designDao;
+    @Autowired
+    private DesignRepository designRepository;
 
     @PostMapping("save")
     public String save(@RequestBody Design design) {
@@ -22,5 +27,10 @@ public class DesignController {
     @GetMapping("find")
     public Design getById(@RequestParam("id") String id) {
         return designDao.findById(id).get();
+    }
+
+    @GetMapping("search-decor-image")
+    public List<Design> findDecoratedImageByTags(@RequestParam("tags") List<String> tags) {
+        return designRepository.searchDesignImageByTags(tags);
     }
 }
