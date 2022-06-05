@@ -11,7 +11,6 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("templateShirt")
-@CrossOrigin
 public class TemplateShirtController {
     @Autowired
     TemplateShirtRepository templateShirtRepository;

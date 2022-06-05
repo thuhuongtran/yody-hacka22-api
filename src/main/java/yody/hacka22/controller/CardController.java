@@ -8,7 +8,6 @@ import yody.hacka22.entity.Card;
 import static org.springframework.http.HttpStatus.OK;
 
 @RestController
-@CrossOrigin
 public class CardController {
     @Autowired
     private CardDao cardDao;

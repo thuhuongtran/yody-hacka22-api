@@ -12,7 +12,6 @@ import java.util.List;
 
 @Controller
 @RequestMapping
-@CrossOrigin
 public class LocaitonController {
     @GetMapping("cities")
     public ResponseEntity<List<String>> getCities(){

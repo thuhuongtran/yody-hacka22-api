@@ -16,7 +16,6 @@ import java.util.Base64;
 import java.util.List;
 
 @RestController
-@CrossOrigin
 @RequestMapping("design")
 public class DesignController {
     @Autowired

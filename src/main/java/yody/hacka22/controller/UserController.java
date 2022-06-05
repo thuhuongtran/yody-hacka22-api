@@ -13,7 +13,6 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("user")
-@CrossOrigin
 public class UserController {
     @Autowired
     MongoTemplate mongoTemplate;

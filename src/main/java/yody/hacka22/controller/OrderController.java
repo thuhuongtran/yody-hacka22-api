@@ -13,7 +13,6 @@ import yody.hacka22.repository.OrderRepository;
 
 @Controller
 @RequestMapping("order")
-@CrossOrigin
 public class OrderController {
     @Autowired
     OrderRepository orderRepository;
