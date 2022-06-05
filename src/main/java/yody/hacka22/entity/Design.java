@@ -24,4 +24,5 @@ public class Design {
     private String imageBase64;
     private Double price;
     private List<String> tags;
+    private String imageLink;
 }

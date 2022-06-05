@@ -1,8 +1,6 @@
 package yody.hacka22.controller;
 
-import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -13,14 +11,9 @@ import yody.hacka22.entity.Design;
 import yody.hacka22.entity.Photo;
 import yody.hacka22.repository.DesignRepository;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Base64;
 import java.util.List;
-
-import static org.springframework.http.HttpStatus.OK;
 
 @RestController
 @RequestMapping("design")
