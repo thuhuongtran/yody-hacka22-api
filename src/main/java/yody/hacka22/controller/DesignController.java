@@ -36,7 +36,7 @@ public class DesignController {
     @PostMapping("save")
     public ResponseEntity<Design> save(@RequestBody Design design) {
         Design response = designDao.save(design);
-        if (response != null){
+        if (response != null) {
             return ResponseEntity.ok(response);
         }
         return null;
@@ -63,11 +63,15 @@ public class DesignController {
         // save design
         design.setImageBase64(Base64.getEncoder().encodeToString(response.getBytes()));
         Design designResponse = designDao.save(design);
-        if (response != null){
+        if (response != null) {
             return ResponseEntity.ok(designResponse);
         }
         return null;
     }
 
+    @GetMapping("list")
+    public List<Design> listAllDesigns() {
+        return designDao.findAll();
+    }
 
 }
