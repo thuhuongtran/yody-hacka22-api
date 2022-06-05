@@ -21,7 +21,7 @@ public class Design {
     private String id;
     private String title;
     private String description;
-    private String imageLink;
+    private String imageBase64;
     private Double price;
     private List<String> tags;
 }

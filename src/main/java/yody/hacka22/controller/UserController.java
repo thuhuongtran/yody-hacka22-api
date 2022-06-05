@@ -22,7 +22,7 @@ public class UserController {
     public ResponseEntity<User> createUser(@RequestBody User user){
         User response = userRepository.createUser(user);
         if (response!=null){
-            response.setPassword("");
+            response.setPassWord("");
             return ResponseEntity.ok(response);
         }
         else return ResponseEntity.internalServerError().body(null);
@@ -38,8 +38,8 @@ public class UserController {
     }
 
     @GetMapping("login")
-    public boolean login(@RequestBody LoginRequest loginRequest){
-        return userRepository.verify(loginRequest);
+    public ResponseEntity<Boolean> login(@RequestBody LoginRequest loginRequest){
+        return ResponseEntity.ok(userRepository.verify(loginRequest));
     }
 
 }

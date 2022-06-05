@@ -49,7 +49,7 @@ public class UserRepository {
     public Boolean verify(LoginRequest loginRequest){
         try{
             Query query = new Query();
-            query.addCriteria(Criteria.where("loginNamed").regex(loginRequest.getPassWord()));
+            query.addCriteria(Criteria.where("loginName").regex(loginRequest.getUserName()).and("passWord").regex(loginRequest.getPassWord()));
             List<TemplateShirt> list =  mongoTemplate.find(query,TemplateShirt.class);
             if (list!= null && list.size() > 0){
                 return true;

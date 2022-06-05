@@ -21,7 +21,6 @@ public class TemplateShirtRepository {
     public TemplateShirt findTemplateShirt(Map<String, String> map){
         if (map != null && map.size() > 0){
             Query query = new Query();
-            int time = 0;
             for (Map.Entry<String, String> entry : map.entrySet()){
                 query.addCriteria(Criteria.where(entry.getKey()).regex(entry.getValue()));
             }

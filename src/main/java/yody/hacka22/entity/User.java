@@ -16,7 +16,8 @@ public class User {
     String phoneNumber;
     String detailAddress;
     GlobalEnum.Role role;
-    String loginNamed;
-    String password; // base64
+    String loginName;
+    String passWord; // base64
     String city;
+    Card card;
 }

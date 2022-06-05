@@ -23,7 +23,7 @@ public class DesignRepository {
         List<Design> designs = new ArrayList<>();
         tags.forEach(tag -> {
             Query query = new Query();
-            query.addCriteria(Criteria.where("tags").regex("$" + tag + "$"));
+            query.addCriteria(Criteria.where("tags").regex(tag));
             designs.addAll(mongoTemplate.find(query, Design.class));
         });
         return designs;
