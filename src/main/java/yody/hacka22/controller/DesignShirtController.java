@@ -8,6 +8,7 @@ import yody.hacka22.entity.DesignShirt;
 import static org.springframework.http.HttpStatus.OK;
 
 @RestController
+@CrossOrigin
 @RequestMapping("shirt")
 public class DesignShirtController {
     @Autowired

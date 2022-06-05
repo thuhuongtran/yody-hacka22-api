@@ -11,6 +11,7 @@ import java.util.List;
 import static org.springframework.http.HttpStatus.OK;
 
 @RestController
+@CrossOrigin
 @RequestMapping("business")
 public class BusinessController {
     @Autowired
